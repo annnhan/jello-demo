@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+#html("/static/js/mod-amd.js")
+
+    #head()
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>$title</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+        #block("headinner")#end
+    #end## end head
+
+    #body()
+        #block("bodyinner")#end
+    #end## end of body
+
+    ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+    #require("./layout.vm")
+#end## end of html

@@ -1,0 +1,13 @@
+#extends("/page/layout/layout.vm")
+
+#block("headinner")
+ #require("/static/js/hanan.js")
+#end
+
+#block("bodyinner")
+ <div> hello world , here is hanan test .</div>
+#end
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./hanan.vm")
+#end
